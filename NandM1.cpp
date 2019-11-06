@@ -12,6 +12,7 @@ void recur(int num){
             cout << v[i] << ' ';
         }
         cout << '\n';
+        return;
     }
     for(int i = 0; i < N; i++){
         if(flag[i] == false) {
