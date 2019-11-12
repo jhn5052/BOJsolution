@@ -1,35 +1,28 @@
 #include<iostream>
+#include<vector>
+#include<algorithm>
 using namespace std;
 
-int main() {
-	int n;
-	int *arr;
-	int time = 0;
-	int sum = 0;
-	int temp;
+vector<int> v;
+int N;
 
-	cin >> n;//ÃÑ °³¼ö
-	arr = new int[n];
-	for (int i = 0; i < n; i++) {
-		cin >> arr[i];
-	}
-	for (int i = 0; i < n - 1; i++) {
-		for (int j = 0; j < n - 1 - i; j++) {
-			if (arr[j] > arr[j+1]) {
-				temp = arr[j];
-				arr[j] = arr[j + 1];
-				arr[j + 1] = temp;
-			}
-		}
-	}
-
-
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j <= i; j++) {
-			sum += arr[j];
-		}
-	}
-	cout << sum;
-	return 0;
-
+int main(){
+    cin >> N;
+    int tmp;
+    for(int i = 0; i < N; i++){
+        cin >> tmp;
+        v.push_back(tmp);
+    }
+    sort(v.begin(), v.end());
+    
+    int ans = v[0];
+    for(int i = 1; i < N; i++){
+        tmp = 0;
+        for(int j = 0; j <= i; j++){
+            tmp += v[j];
+        }
+        ans += tmp;
+    }
+    cout << ans;
+    return 0;
 }
