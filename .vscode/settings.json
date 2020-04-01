@@ -1,0 +1,23 @@
+{
+    "files.associations": {
+        "__locale": "cpp",
+        "__tuple": "cpp",
+        "algorithm": "cpp",
+        "codecvt": "cpp",
+        "fstream": "cpp",
+        "locale": "cpp",
+        "memory": "cpp",
+        "numeric": "cpp",
+        "bit": "cpp",
+        "*.tcc": "cpp",
+        "bitset": "cpp",
+        "exception": "cpp",
+        "functional": "cpp",
+        "iterator": "cpp",
+        "limits": "cpp",
+        "ratio": "cpp",
+        "streambuf": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp"
+    }
+}
